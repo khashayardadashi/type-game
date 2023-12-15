@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static' , filename='assets/css/stylelogin.css')}}">
+    <title>login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2 id="result">به تایپ گیم خوش آمدید ...</h2>
+            <div class="form-wrap">
+                <form action="{{url_for('login')}}" method="post">
+                    <div class="input-box">
+                        <input type="text" class="input" id="username" placeholder="نام کاربری" name="username" required>
+                        <label for="username">نام کاربری</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input" id="password" placeholder="رمز عبور" name="password" required>
+                        <label for="password">رمز عبور ( شامل  حروف و اعداد )</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" class="btn-submit" value="ثبت نام" required>
+                        <div class="notifi">
+                            <p> حساب کاربری داری؟ همین حالا <a href="{{url_for('login')}}">ورود</a> کن</p>
+                            <p> 1.1.0 v</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<script>
+var result = document.getElementById("result");
+function writer(element,text,time){
+	var i = 0;
+	var run = setInterval(function(){
+		element.innerHTML+=text.charAt(i);
+		i++;
+		if(i==text.length){
+            clearInterval(run);
+            element.innerHTML=" به تایپ گیم خوش آمدید"
+            writer(result," ... ",0.5)
+        }
+	},time*1000)
+}
+writer(result,".",0.5)
+</script>
+</body>
+</html>

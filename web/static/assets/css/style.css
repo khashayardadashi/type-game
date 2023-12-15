@@ -1,0 +1,1048 @@
+@font-face{
+    font-family: vazir-font-fa;
+    src: url('../font/Vazir-Medium-FD.woff');
+}
+
+@font-face{
+    font-family:vazir-font ;
+    src: url('../font/Vazir.woff');
+}
+
+*{
+    font-family: vazir-font-fa;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.font-30{
+    font-size: 35px;
+}
+
+.font-25{
+    font-size: 25px;
+}
+
+.font-18{
+    font-size: 18px;
+}
+
+.font-15{
+    font-size: 15px;
+}
+
+.font-14{
+    font-size: 14px;
+}
+
+.font-13{
+    font-size: 13px;
+}
+
+.font-12{
+    font-size: 12px;
+}
+
+.vazir-font{
+    font-family:vazir-font ;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.line-height{
+    line-height: 2.3;
+}
+
+input::placeholder , textarea::placeholder , select{
+    font-size: 13px !important;
+    font-family: vazir-font !important;
+}
+
+[type="tel"], [type="url"], [type="email"], [type="number"]{
+    direction: rtl !important;
+}
+
+.btn-info {
+    color: #fff !important;
+    background-color: #6ec4e9 !important;
+    border-color: #6ec4e9 !important;
+}
+
+.btn-info:hover {
+    background-color: #56b8e2 !important;
+    border-color: #56b8e2 !important;
+}
+
+.btn-warning{
+    background-color: #ffc425 !important ;
+}
+
+.text-info {
+    color: #56b8e2  !important;
+}
+
+.bg-info{
+    background-color: #56b8e2 !important;
+}
+
+/* ---------- start style for header ---------- */
+
+.search-btn{
+    width: 30px;
+    height: 30px;
+}
+
+.shopping-bag-icon{
+    width: 30px;
+    height: 32px;
+}
+
+.count{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color:#ffc425;
+    border-radius: 50%;
+    top: 0;
+    left: 28px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.signup-login{
+    position: relative;
+}
+
+.btn-signup,.btn-login{
+    width: 85px;
+    line-height: 45px;
+    background-color: #6ec4e9;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    display: inline-block;
+    transition: all ease 500ms;
+}
+
+.btn-signup{
+    border-radius: 0 40px 40px 0;
+    margin-left: 1px;
+}
+
+.btn-login{
+    border-radius: 40px 0 0 40px;
+}
+
+.signup-login::before,.signup-login::after{
+    content: '';
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.signup-login::before{
+    width: 20px;
+    height: 20px;
+}
+
+.signup-login::after{
+    width: 16px;
+    height: 16px;
+    border: 1px solid #46b2f0;
+}
+
+.btn-signup:hover,.btn-login:hover{
+    background-color: #56b8e2;
+    color: #fff;
+    transition: all ease 500ms;
+    z-index: 100;
+}
+
+.header-icon{
+    font-size: 25px;
+    vertical-align: middle;
+    color: #6d7072;
+    cursor: pointer;
+}
+
+.cart-item{
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:first-child{
+    border-top: 1px solid #eee;
+}
+
+.cart-item > a > img{
+    width: 130px;
+    height: 80px;
+    padding: 5px;
+}
+
+.cart-item-detail{
+    display: inline-block;
+}
+
+.cart-item .delete-item {
+    background-color: #eaeaea;
+    padding: 35px 5px;
+}
+
+.cart-item-detail a{
+    display: inline-block;
+    font-size: 13px;
+    color: #474747;
+}
+
+.cart-item .delete-item i {
+    color: #acadb1;
+    font-size: 12px;
+  }
+
+/* ---------- end style for header ---------- */
+
+/* ---------- start style for menu ---------- */
+
+.navigation{
+    width: 100%;
+    height: 45px;
+    position: relative;
+}
+
+.main-menu{
+    width: 100%;
+    height: 45px;
+    display: flex;
+}
+
+.main-menu > li > a{
+    margin-left: 45px;
+}
+
+.main-menu > li > a{
+    color: #474747;
+    font-size: 13px;
+    line-height: 45px;
+    display: inline-block;
+    position: relative;
+}
+
+.mega-menu{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    width: 50%;
+    margin-right:140px;
+    padding: 7px 0;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 400ms ease;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+.mega-menu-box > ul > li > a{
+    display: inline-block;
+    color: #474747;
+    margin:10px 0;
+    padding-right: 15px;
+    font-size: 13px;
+}
+
+.main-menu li:hover > .mega-menu , .main-menu li:hover > .sub-menu{
+    opacity: 1;
+    visibility: visible;
+    transition: all 400ms ease;
+}
+
+.main-menu > li > a > i{
+    transition: all 400ms ease;  
+}
+
+.main-menu > li:hover > a > i{
+    transform: rotate(180deg);
+    transition: all 400ms ease;
+}
+
+.menu-title > a{
+    padding-right: unset !important;
+}
+
+.sub-menu{
+    position: absolute;
+    width: 200px;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12) !important;
+    padding-right: 0 !important;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 400ms ease;
+}
+
+.sub-menu li{
+    padding: 0 20px;
+    border-bottom: 1px solid #eee;
+    margin: 0;
+}
+
+.sub-menu li a{
+    font-size: 13px;
+    display: block;
+    color: #474747;
+    line-height: 40px;
+}
+
+.sub-menu li:last-child{
+    border-bottom: unset !important;
+}
+
+.offcanvas-end , .offcanvas-start{
+    max-width: 300px !important;
+}
+
+.offcanvas-body{
+    padding: unset !important;
+}
+
+.responsive-menu-level-1 .menu-item > a , .responsive-menu-level-2 > .menu-item-2 > a , .responsive-menu-level-3 > .menu-item-3 > a{
+    color: #474747;
+    display: block;
+    line-height: 40px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.responsive-menu-level-1 .menu-item > a{
+    font-size: 13px;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.responsive-menu-level-2 .menu-item-2 > a , .responsive-menu-level-3 .menu-item-3 > a{
+    font-size: 12px;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.responsive-menu-level-1 .menu-item:first-child{
+    border-top: 1px solid #f9f9f9;
+}
+
+.menu-item.has-sub-menu.open > a::before , .menu-item.has-sub-menu.open > a::after{
+    transform: rotate(45deg);
+    transition: all ease 200ms;
+}
+
+.menu-item.has-sub-menu > a::before{
+    content: '';
+    position: absolute;
+    background-color: #474747;
+    width: 10px;
+    height: 2px;
+    top: 21px;
+    left: 30px;
+    transition: all ease 200ms;
+}
+
+.menu-item.has-sub-menu > a::after{
+    content: '';
+    position: absolute;
+    background-color: #474747;
+    width: 2px;
+    height: 10px;
+    top: 17px;
+    left: 34px;
+    transition: all ease 200ms;
+}
+
+.responsive-menu-level-2 , .responsive-menu-level-3{
+    background-color: #eee;
+    display: none;
+}
+
+.menu-item-2.has-sub-menu-2 > a::before{
+    content: '';
+    position: absolute;
+    background-color: #474747;
+    width: 6px;
+    height: 2px;
+    top: 21px;
+    left: 30px;
+    transition: all ease 200ms;
+}
+
+.menu-item-2.has-sub-menu-2 > a::after{
+    content: '';
+    position: absolute;
+    background-color: #474747;
+    width: 2px;
+    height: 6px;
+    top: 19px;
+    left: 32px;
+    transition: all ease 200ms;
+}
+
+.responsive-menu-level-3 > .menu-item-3 > a{
+    padding-right: 40px;
+}
+
+.menu-item-2.has-sub-menu-2.open > a::before , .menu-item-2.has-sub-menu-2.open > a::after{
+    transform: rotate(45deg);
+    transition: all ease 200ms;
+}
+
+/* ---------- end style for menu ---------- */
+
+/* ---------- start style for banner box ---------- */
+
+.banner{
+    width: 100%;
+    height: 600px;
+    background-image: url('../images/main-banner.jpg');
+    background-size: 100% 100%;
+}
+
+.banner h1{
+    font-size: 35px;
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.banner > p{
+    font-size: 20px;
+    color: #fff;
+}
+
+
+.banner-2{
+    width: 100%;
+    height: 600px;
+    background-image: url('../images/home-banner.jpg');
+    background-size: 100% 100%;
+}
+
+.banner-2  h1{
+    font-size: 35px;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.banner-2  p{
+    font-size: 20px;
+}
+
+.banner-3{
+    background-color: #f3f4f6;
+}
+
+.banner-3  h1{
+    margin-top: 70px;
+    line-height: 1.7;
+}
+
+.banner-3  h6{
+    color: #8C8C8C;
+    margin: 20px 0;
+    line-height:2;
+}
+
+.btn-custom-info{
+    background-color: #46b2f0;
+    color: #fff;
+    padding: 15px 25px;
+    margin-bottom: 10px;
+}
+
+.btn-custom-info:hover{
+    color: #fff;
+}
+
+#chalkboard-icon,#wallet-icon,#pen-icon,#phone-icon{
+    padding: 10px 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+#chalkboard-icon {
+    background-color: #FF004817;
+    color: #FF0048;
+}
+
+#wallet-icon{
+    background-color: #9090901C;
+    color: #909090
+}
+
+#pen-icon{
+    background-color: #DB00FF17;
+    color: #DB00FF;
+}
+
+#phone-icon{
+    background-color: #28C9FC21;
+    color: #28C9FC;
+}
+
+.banner-icon{
+    width: 90px;
+    height: 90px;
+}
+
+.custom-warning-btn:hover{
+    color: #fff;
+}
+
+.icon-box{
+    margin: 70px auto 0 auto;
+}
+
+/* ---------- end style for banner box ---------- */
+
+/* ---------- start style for title ---------- */
+
+.title{
+    position: relative;
+}
+
+.title::before{
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 44px;
+    border-radius: 5px;
+    transform: rotatez(11deg);
+    right: 0;
+    top: 9px;
+    background:#ffc425;
+}
+
+.title-btn{
+    background-color: #ffc425;
+    color: #fff;
+    font-size: 13px;
+    padding: 8px;
+    border-radius: 3px;
+}
+
+.title-btn:hover{
+    color: #fff;
+}
+
+/* ---------- end style for title ---------- */
+
+/* ---------- start style for course items ---------- */
+
+.custom-card{
+    overflow: hidden;
+}
+
+.sub-layer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.over-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 3px;
+    transition: all ease-in-out 0.2s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.over-layer .btn{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%)scale(0);
+    font-size: 10px;
+    transition: all ease-in-out 0.4s;
+}
+
+.custom-card:hover .over-layer{
+    visibility: visible;
+    opacity: 1;
+    transition: all ease-in-out 0.2s;
+}
+
+.custom-card:hover .over-layer .btn{
+    transform: translate(50%, -50%) scale(1);
+}
+
+.team-icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+/* ---------- end style for course items ---------- */
+
+/* ---------- start style for price items ---------- */
+
+.circle{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: #000;
+    clip-path: circle(180px at center 0);
+    text-align: center;
+}
+
+.circle h5{
+    color: #fff;
+    padding: 30px 0;
+}
+
+.custom-card-signup{
+    position: relative;
+    background: #fff;
+    margin: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card-1 .circle{
+    background-color: #697980 !important;
+}
+
+
+.card-2 .circle{
+    background-color:  #ffc425 !important;
+}
+
+
+.card-3 .circle{
+    background-color: #6ec4e9 !important;
+}
+
+#contact2:hover{
+    color: #fff !important;
+}
+
+#contact3{
+    border: 1px solid #6ec4e9 !important;
+}
+
+#contact3:hover{
+    background-color:  #6ec4e9 !important;
+}
+
+/* ---------- end style for price items ---------- */
+
+/* ---------- start style for comment slider ---------- */
+
+.comment-pic{
+    width: 70px !important;
+    height: 70px !important;
+    display: inline-block !important;
+    border-radius: 50%;
+}
+
+.comment-icon{
+    max-width: 45px;
+}
+
+.student-rating{
+    color: #fff;
+    font-size: 13px;
+    display: inline-block;
+    background-color: #6ec4e9;
+    margin:4px 8px 0 0;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.owl-dot{
+    display: none !important;
+}
+
+.owl-nav .owl-next , .owl-nav .owl-prev{
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    color: #ffc425 !important;
+    font-size: 18px !important;
+    border-radius:50% !important;
+    background-color: #fff !important;
+}
+
+.owl-nav .owl-next{
+    left: -15px;
+    box-shadow: 2px 0 4px rgba(56, 44, 44, 0.15) !important;
+}
+
+.owl-nav .owl-prev{
+    right: -15px;
+    box-shadow: -2px 0 4px rgba(56, 44, 44, 0.15) !important;
+}
+
+/* ---------- end style for comment slider ---------- */
+
+/* ---------- start style for team box ---------- */
+
+.team-box{
+    width: 100%;
+    background-image: url('../images/courses_background.jpg');
+    background-size: 100% 100%;
+    padding-bottom: 40px;
+}
+
+.team-image{
+    width: 180px;
+    height: 160px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -86px;
+    z-index: 5;
+}
+
+.team-body {
+    width: 100%;
+    padding-top: 108px;
+    padding-bottom: 24px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0px 1px 10px rgba(29,34,47,0.1) !important;
+    text-align: center;
+    transition: all 200ms ease;
+} 
+
+.team-name{
+    background-color: #28C9FC21;
+    font-size: 13px;
+    display: inline-block;
+    padding: 5px 40px;
+    border-radius: 30px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    color:#474747;
+    margin-bottom: 25px;
+}
+
+.team-item:hover .team-body {
+    box-shadow: 0px 5px 40px rgba(29,34,47,0.15) !important;
+}
+
+.social-list a i{
+    color: #9da0a1;
+    font-size:21px;
+    margin: 0 5px;
+    transition: all ease 0.5ms;
+}
+
+.social-list a i:hover{
+    color: #56b8e2 !important;
+    transition: all ease 0.5ms;
+}
+
+/* ---------- end style for team box ---------- */
+
+/* ---------- start style for articles ---------- */
+
+.article-card {
+    overflow: hidden;
+}
+
+.article-card img{
+    max-height: 200px;
+}
+
+/* ---------- end style for articles ---------- */
+
+/* ---------- start style for footer ---------- */
+
+.footer-pic{
+    width:130px;
+    height: 130px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin:20px 0 0 10px;
+    padding: 5px;
+}
+
+.email-btn i{
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 8px 0 8px;
+}
+
+.social-media{
+    font-size: 23px;
+    color: #9da0a1;
+    margin-left: 25px;
+}
+
+.topbutton {
+	height:50px;
+	width:50px;
+	position:fixed;
+	left:0;
+	bottom:20px;
+	z-index:110;
+	background-image: url('../images/top.png');
+	background-repeat:no-repeat;
+    display: none;
+}
+
+@media(max-width:991px){
+    .footer-links{
+        text-align: right !important;
+    }
+}
+
+@media(max-width:768px){
+    .footer-pics{
+        justify-content: center !important;
+    }
+}
+
+/* ---------- end style for footer ---------- */
+
+/* ---------- start style for signup & login page ---------- */
+
+.signup-form .input-group-text{
+    background-color: #fff !important;
+    padding: 0 17px;
+}
+
+.signup-form .input-group-text > i{
+    color: #909090;
+}
+
+.under-line{
+    border-bottom: 2px dotted #ffc425;
+}
+
+.form-check-input-custom{
+    margin-right: -1em !important;
+}
+
+/* ---------- end style for signup & login page ---------- */
+
+/* ---------- start style for course page ---------- */
+
+.play-icon{
+    font-size: 13px;
+    background-color: #28C9FC21;
+    padding: 13px 15px;
+    border-radius: 50%;
+    color: #46b2f0;
+    border: 1px solid #46b2f0;
+}
+
+.lock-icon{
+    font-size: 13px;
+    background-color: #ffebb5;
+    padding: 13px 15px;
+    border-radius: 50%;
+    color: #ffc425;
+    border: 1px solid #ffc425;
+}
+
+.video-img{
+    width: 100%;
+    max-height: 300px;
+}
+
+.sub-video-layer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.over-video-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 3px;
+}
+
+.play-video-icon{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    color:#ffc425;
+    padding: 13px 15px;
+    font-size: 13px;
+    border-radius: 50%;
+    color: #ffc425;
+    background-color: #ffebb5;
+    border: 1px solid #ffc425;
+}
+
+.btn-block{
+    display: block;
+    width: 100%;
+}
+
+.teacher-social-media i{
+    background-color: #56b8e2;
+    color: #fff;
+    font-size: 22px;
+    padding: 5px 7px;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+.nav-tabs .nav-link.active {
+    border-top: 5px solid #ffc425 !important;
+    border-radius: 0 !important;
+}
+
+.nav-tabs .nav-link:hover{
+    height: 100% !important;
+}
+
+.nav-tabs-custome li > a{
+    color: #474747;
+    font-size: 13px;
+    display: inline-block;
+    padding: 15px 10px;
+}
+
+.nav-tabs-custome li > a:hover{
+    color: #474747;
+}
+
+/* ---------- end style for course page ---------- */
+
+/* ---------- start style for blog & article page ---------- */
+
+.blog-pic{
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+    margin-top: 9px;
+}
+
+.search-in-result::after{
+    content: '\f002';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    color: #6e7074;
+    left: 12px;
+    top: 7px;
+}
+
+.article-pic{
+    width: 100%;
+    max-height: 450px;
+    border-radius: 4px !important;
+}
+
+/* ---------- end style for blog & article page ---------- */
+
+/* ---------- start style for profie page ---------- */
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+.list-group-item{
+    padding: .75rem 1.25rem !important;
+}
+
+.profile-course-box img{
+    width: 100%;
+    height: 170px;
+    border-radius: 4px !important;
+    display: block;
+    margin: 10px auto 0 auto;
+
+}
+
+.badge{
+    font-weight: lighter !important;
+}
+
+.personal-info-form .form-control-lg {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+}
+
+.personal-info-form input[type="file"]{
+    padding: 8px 10px 0 0;
+}
+
+/* ---------- end style for profie page ---------- */
+
+/* ---------- start style for cart page ---------- */
+
+#cart-table thead > tr > td , #cart-table > tbody > tr > td{
+    padding: 20px 10px;
+    font-size: 13px;
+    text-align: center;
+}
+
+#cart-table > thead > tr > td{
+
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+#cart-table .form-control{
+	width: 100px;
+	display: inline-block;
+}
+
+.cart-qty-plus,
+.cart-qty-minus{
+	width: 34px;
+	height: 34px;
+	background-color: #fff;
+	border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.qty{
+    width: 34px !important;
+    height: 34px !important;
+    margin: 0 3px;
+}
+
+.cart-qty-plus:hover,
+.cart-qty-minus:hover{
+	background-color: #56b8e2;
+	color: #fff;
+}
+
+.product-img img{
+	width: 90px;
+	height: 50px;
+}
+/* ---------- end style for cart page ---------- */
+
